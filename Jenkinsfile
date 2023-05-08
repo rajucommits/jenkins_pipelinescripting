@@ -36,10 +36,19 @@ pipeline {
 
 
           //working with for loop
-          for (i=1;i<=3;i++) {println "1st way, i is ${i}"}
+          for (i=1;i<=3;i++) {println "1st way in for loop, i is ${i}"}
           //another way of defining for loop
           lis1 = [10,20,20]
-          for (i in lis1) {println "2nd way, i is ${i}"}
+          for (i in lis1) {println "2nd way in for loop, i is ${i}"}
+
+
+          //working with while loop
+          j=1
+          while (j<=3) {
+            println "while loop, j is ${j}"
+            sleep(2)
+            j++
+          }
         }
       }
     }
