@@ -5,6 +5,7 @@ pipeline {
       steps {
         script {
           input message: 'Enter variable to display', parameters: [string(defaultValue: '10', name: 'var1', trim: true)]
+          println "The input variable is ${var1}"
         }
       }
     }
