@@ -8,7 +8,7 @@ pipeline {
       steps {
         script {
           //This section is for input variable
-          input message: 'Enter variable to display', parameters: [string(defaultValue: '10', name: 'var1', trim: true)]
+          var1 = input message: 'Enter variable to display', parameters: [string(defaultValue: '10', name: 'var1', trim: true)]
           println "The input variable is ${var1}"
 
           //This section is for default variables
