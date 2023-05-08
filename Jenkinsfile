@@ -26,6 +26,13 @@ pipeline {
           //This section is of parameter variables
           println "The chosen environment is ${ENV}, without specifying params"
           println "The chosen environment is ${params.ENV}, with specifying params"
+
+          //Working with if condition
+          a = 10
+          b = 20
+
+          if (a>b) {println "a=${a} is big"}
+          else {println "b=${b} is big"}
         }
       }
     }
