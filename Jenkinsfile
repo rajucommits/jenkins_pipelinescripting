@@ -2,7 +2,12 @@ pipeline {
   agent any
   environment {
   JAVA_HOME = "/usr/bin/java8"
-}
+  }
+
+  parameters {
+  choice choices: ['dev', 'sit', 'prod', 'uat'], description: 'environment choices', name: 'ENV'
+  }
+
   stages {
     stage("Welcome to Jenkins build job") {
       steps {
@@ -13,6 +18,12 @@ pipeline {
 
           //This section is for default variables
           println "The job name is ${JOB_NAME}"
+
+          //This section is of environment variables
+          println "The java path is ${JAVA_HOME}"
+
+          //This section is of parameter variables
+          println "The chosen environment is ${ENV}"
         }
       }
     }
