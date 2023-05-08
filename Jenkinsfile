@@ -4,8 +4,7 @@ pipeline {
     stage("Welcome to Jenkins build job") {
       steps {
         script {
-          var1 = 20
-          println "The declared variable is ${var1}"
+          input message: 'Enter variable to display', parameters: [string(defaultValue: '10', name: 'var1', trim: true)]
         }
       }
     }
