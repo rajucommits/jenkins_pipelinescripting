@@ -20,10 +20,12 @@ pipeline {
           println "The job name is ${JOB_NAME}"
 
           //This section is of environment variables
-          println "The java path is ${JAVA_HOME}"
+          println "The java path is ${JAVA_HOME} without specifying env"
+          println "The java path is ${env.JAVA_HOME} with specifying env"
 
           //This section is of parameter variables
-          println "The chosen environment is ${ENV}"
+          println "The chosen environment is ${ENV}, without specifying params"
+          println "The chosen environment is ${params.ENV}, with specifying params"
         }
       }
     }
