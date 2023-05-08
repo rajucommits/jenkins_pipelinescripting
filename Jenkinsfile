@@ -4,7 +4,8 @@ pipeline {
     stage("Welcome to Jenkins build job") {
       steps {
         script {
-        println "This is pipeline scripting"
+          var1 = 20
+          println "The declared variable is ${var1}"
         }
       }
     }
