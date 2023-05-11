@@ -1,3 +1,7 @@
+//Here we are defining function and function should be defined outside of pipeline
+def myfn () {println "This is from function"}
+
+
 pipeline {
   agent any
   environment {
@@ -57,6 +61,10 @@ pipeline {
           println lines
           //printing each line
           for(line in lines) {println line}
+
+
+          //calling a function
+          myfn()
           }
         }
       }
