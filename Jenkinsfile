@@ -1,5 +1,8 @@
 //Here we are defining function and function should be defined outside of pipeline
-def myfn () {println "This is from function"}
+def myfn (a=100,b=200) {
+  println "This is from function"
+  println "Value of a is ${a} and b is ${b}"
+}
 
 
 pipeline {
@@ -65,6 +68,8 @@ pipeline {
 
           //calling a function
           myfn()
+          myfn(300,400)
+          myfn(500)
           }
         }
       }
