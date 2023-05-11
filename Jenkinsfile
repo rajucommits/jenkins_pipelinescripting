@@ -48,6 +48,15 @@ pipeline {
             println "while loop, j is ${j}"
             sleep(2)
             j++
+
+
+          //working with file reading
+          File myfile = new File("/tmp/test.txt")
+          lines = myfile.readLines()
+          //printing all lines 
+          println lines
+          //printing each line
+          for(line in lines) {println line}
           }
         }
       }
